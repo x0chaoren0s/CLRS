@@ -5870,9 +5870,9 @@ $$</p>
 <li>If $i &lt; j$, for each $k$, s.t. $i \le k &lt; j$, the subproblem graph contains edges $(v_{ij}, v_{ik})$ and $(v_{ij}, v_{k+1, j})$, and these edges indicate that to solve the subproblem of optimally parenthesizing the product $A_i \cdots A_j$, we need to solve subproblems of optimally parenthesizing the products $A_i \cdots A_k$ and $A_{k + 1} \cdots A_j$.</li>
 </ul>
 <p>The number of vertices is</p>
-<p>$$\sum_{i = 1}^n \sum_{j = 1}^n = \frac{n(n + 1)}{2}.$$</p>
+<p>$$\sum_{i = 1}^n \sum_{j = i}^n = \frac{n(n + 1)}{2}.$$</p>
 <p>The number of edges is</p>
-<p>$$\sum_{i = 1}^n \sum_{j = 1}^n (j - i) = \frac{(n - 1)n(n + 1)}{6}.$$</p>
+<p>$$\sum_{i = 1}^n \sum_{j = i}^n (j - i) = \frac{(n - 1)n(n + 1)}{6}.$$</p>
 <h2 id="152-5">15.2-5</h2>
 <blockquote>
 <p>Let $R(i, j)$ be the number of times that table entry $m[i, j]$ is referenced while computing other table entries in a call of $\text{MATRIX-CHAIN-ORDER}$. Show that the total number of references for the entire table is</p>

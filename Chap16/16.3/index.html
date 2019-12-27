@@ -5904,7 +5904,7 @@ B(T) &amp; = f(x) d_T(x) + f(y) d_T(y) \\
      &amp; = f(\text{child}_1\text{ of }z) + f(\text{child}_2\text{ of }z).
 \end{aligned}
 $$</p>
-<p>Thus, the statement of theorem is true. Now suppose $n &gt; 2$ and also suppose that theorem is true for trees on $n - 1$ leaves.<br />
+<p>Thus, the statement of theorem is true. Now suppose $n &gt; 2$ and also suppose that theorem is true for trees on $n - 1$ leaves.
 Let $c_1$ and $c_2$ are two sibling leaves in $T$ such that they have the same parent $p$. Letting $T'$ be the tree obtained by deleting $c_1$ and $c_2$, by induction we know that</p>
 <p>$$
 \begin{aligned}
@@ -5935,7 +5935,7 @@ $$</p>
 &amp; &gt; f(x_{\lfloor \frac{n}{2} + 1 \rfloor})(d_T(x_{\lfloor \frac{n}{2} \rfloor - 1}) - d_T(x_{\lfloor \frac{n}{2} \rfloor + 1}))+ \cdots + f(x_n)(d_T(x_1) - d_T(x_n)).
 \end{aligned}
 $$</p>
-<p>That is, where $i$ and $j$ are the upper and lower median,<br />
+<p>That is, where $i$ and $j$ are the upper and lower median,
 respectively; and $c_i = d_T(x_i) - d_T(x_{n - i + 1})$:</p>
 <p>$$f(x_1)c_1 + \cdots + f(x_i)c_i &gt; f(x_j)c_i + \cdots + f(x_n)c_1$$</p>
 <p>since</p>
@@ -5950,7 +5950,7 @@ $$</p>
 </blockquote>
 <p>First observe that any full binary tree has exactly $2n - 1$ nodes. We can encode the structure of our full binary tree by performing a preorder traversal of $T$.
 For each node that we record in the traversal, write a $0$ if it is an internal node and a $1$ if it is a leaf node. Since we know the tree to be full, this uniquely determines its structure.</p>
-<p>Next, note that we can encode any character of $C$ in $\lceil \lg n \rceil$ bits. Since there are $n$ characters, we can encode them in order of appearance in our preorder traversal using ndlg ne bits.</p>
+<p>Next, note that we can encode any character of $C$ in $\lceil \lg n \rceil$ bits. Since there are $n$ characters, we can encode them in order of appearance in our preorder traversal using $n\left\lceil \lg n \right\rceil$ bits.</p>
 <h2 id="163-7">16.3-7</h2>
 <blockquote>
 <p>Generalize Huffman's algorithm to ternary codewords (i.e., codewords using the symbols $0$, $1$, and $2$), and prove that it yields optimal ternary codes.</p>
