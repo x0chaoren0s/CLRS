@@ -5823,7 +5823,16 @@
 <blockquote>
 <p>Which is a more efficient way to determine the optimal number of multiplications in a matrix-chain multiplication problem: enumerating all the ways of parenthesizing the product and computing the number of multiplications for each, or running $\text{RECURSIVE-MATRIX-CHAIN}$? Justify your answer.</p>
 </blockquote>
-<p>The runtime of of enumerating is just $n \cdot P(n)$, while is we were running $\text{RECURSIVE-MATRIX-CHAIN}$, it would also have to run on all of the internal nodes of the subproblem tree. Also, the enumeration approach wouldn't have as much overhead.</p>
+<p>Running $\text{RECURSIVE-MATRIX-CHAIN}$ is asymptotically more efficient than enumerating all the ways of parenthesizing the product and computing the number of multiplications for each.</p>
+<p>Consider the treatment of subproblems by each approach:</p>
+<ol>
+<li>
+<p>For each possible place to split the matrix chain, the enumeration approach finds all ways to parenthesize the left half, finds all ways to parenthesize the right half, and looks at all possible combinations of the left half with the right half. The amount of work to look at each combination of left and right half subproblem results is thus the product of the number of ways to parenthesize the left half and the number of ways to parenthesize the right half.</p>
+</li>
+<li>
+<p>For each possible place to split the matrix chain, $\text{RECURSIVE-MATRIX-CHAIN}$ finds the best way to parenthesize the left half, finds the best way to parenthesize the right half, and combines just those two results. Thus the amount of work to combine the left and right half subproblem results is $O(1)$.</p>
+</li>
+</ol>
 <h2 id="153-2">15.3-2</h2>
 <blockquote>
 <p>Draw the recursion tree for the $\text{MERGE-SORT}$ procedure from Section 2.3.1 on an array of $16$ elements. Explain why memoization fails to speed up a good divide-and-conquer algorithm such as $\text{MERGE-SORT}$.</p>
